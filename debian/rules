@@ -1,4 +1,16 @@
 #!/usr/bin/make -f
 
+DEB_PREFIX=debian/libbioperl-ext-perl/usr
+ALIGN_DIR=${DEB_PREFIX}/lib/perl5/auto/Bio/Ext/Align
+SEQIO_DIR=${DEB_PREFIX}/lib/perl5/auto/Bio/SeqIO/staden/read
+
 %:
 	dh $@
+
+override_dh_auto_install:
+	dh_auto_install
+	mkdir -p ${ALIGN_DIR}
+	mkdir -p ${SEQIO_DIR}
+	cp Bio/Ext/blib/arch/auto/Bio/Ext/Align/Align.*          ${ALIGN_DIR}
+	cp Bio/SeqIO/blib/arch/auto/Bio/SeqIO/staden/read/read.* ${SEQIO_DIR}
+	ln -s /usr/share/perl5/Bio/Ext/Align/Align.pm ${DEB_PREFIX}/share/perl5/Bio/Ext/Align.pm
