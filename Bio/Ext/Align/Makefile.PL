@@ -15,7 +15,7 @@ sub MY::postamble{
 '
 $(MYEXTLIB): 
 	DEFINE=\'$(DEFINE)\'; CC=\'$(PERLMAINCC)\'; CFLAGS=\'$(CCFLAGS)\'; export DEFINE INC CC CFLAGS; \
-	cd libs && $(MAKE) CC=\'$(PERLMAINCC)\' CFLAGS=\'$(CCFLAGS) $(DEFINE)\' DEFINE=\'$(DEFINE)\' libsw$(LIB_EXT) -e ; \
+	cd libs && $(MAKE) CC=\'$(PERLMAINCC)\' CFLAGS=\'$(CCFLAGS) $(CCCDLFLAGS) $(DEFINE)\' DEFINE=\'$(DEFINE)\' libsw$(LIB_EXT) -e ; \
     $(RANLIB) libsw$(LIB_EXT)
 ';
 }
