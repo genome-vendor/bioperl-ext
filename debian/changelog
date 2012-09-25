@@ -1,3 +1,9 @@
+libbioperl-ext-perl (1.007000-2) unstable; urgency=low
+
+  * Get the build dependancies right
+
+ -- Anthony Brummett <abrummet@genome.wustl.edu>  Mon, 24 Sep 2012 16:11:00 -0500
+
 libbioperl-ext-perl (1.007000-1) unstable; urgency=low
 
   * Initial Release.

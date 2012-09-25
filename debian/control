@@ -1,14 +1,14 @@
 Source: libbioperl-ext-perl
 Section: perl
 Priority: optional
-Build-Depends: debhelper (>= 7), perl
-Maintainer: Randy Hancock <rhancock@>
+Build-Depends: debhelper (>= 7), perl, libstaden-read-dev, zlib1g-dev, libbio-perl-perl
+Maintainer: Anthony Brummett <abrummet@genome.wustl.edu>
 Standards-Version: 3.8.3
 Homepage: http://search.cpan.org/dist/bioperl-ext/
 
 Package: libbioperl-ext-perl
 Architecture: any
-Depends: ${perl:Depends}, ${shlibs:Depends}, ${misc:Depends}
+Depends: ${perl:Depends}, ${shlibs:Depends}, ${misc:Depends}, libbio-perl-perl
 Description: trace file input/output stream using the Staden IO "read" library
  This object can transform Bio::Seq objects to and from various trace file
  formats.
