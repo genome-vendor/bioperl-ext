@@ -1,4 +1,4 @@
-libbioperl-ext-perl (1.007000-2) unstable; urgency=low
+libbioperl-ext-perl (1.007000-2~Ubuntu~precise) unstable; urgency=low
 
   * Get the build dependancies right
 
