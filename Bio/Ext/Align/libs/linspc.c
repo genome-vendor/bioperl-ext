@@ -848,6 +848,11 @@ traceback(sw_AlignStruct * as)
     free(as->FF);
     free(as->RR);
 
+    for (i = 0; i < 17; i++) {
+        free(as->s[i]);
+    }
+    free(as->s);
+
     ao = (dpAlign_AlignOutput *) calloc(1, sizeof(dpAlign_AlignOutput));
     if (ao == NULL)
 	dpAlign_fatal("Can't allocate memory for AlignOutput!\n");
